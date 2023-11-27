@@ -4,7 +4,7 @@ import sys
 from pathlib import Path
 from time import time
 from colorama import Fore,Style
-
+import stat
 def is_music(file):
     return file.endswith(".mp3") or file.endswith(".MP3")
 
@@ -51,6 +51,7 @@ def delete_duplicates(files_state):
         if choose == "y":
             print(Fore.YELLOW +"-------------------------Removed files:-------------------------".center(100)) 
             for file in duplicate_files:
+                os.chmod(file, stat.S_IRWXU| stat.S_IRWXG| stat.S_IRWXO)
                 os.remove(file)
                 print(Fore.RED+f"{file}".center(100))
             print(Fore.YELLOW +"-------------------------Removed files-------------------------".center(100)+Fore.RESET )
