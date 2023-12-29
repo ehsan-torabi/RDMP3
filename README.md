@@ -1,6 +1,4 @@
-
-
-# Music File Duplicate Remover
+## Music File Duplicate Remover
 
 This Python script helps you find and remove duplicate music files in your directories.
 
