@@ -4,7 +4,7 @@ This Python script helps you find and remove duplicate music files in your direc
 
 ## Description
 
-The script works by traversing the directories you specify, identifying all music files (currently only .mp3 files are supported), and checking for duplicates. Duplicates are identified by their SHA-256 hash. If duplicates are found, you will be prompted to confirm their deletion.
+The script works by traversing the directories you specify, identifying all music files (currently only .mp3 files are supported), and checking for duplicates. Duplicates are identified by their xxhash3 hash. If duplicates are found, you will be prompted to confirm their deletion.
 
 ## Usage
 
