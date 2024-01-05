@@ -1,4 +1,4 @@
-import hashlib
+import xxhash
 import os
 import sys
 from pathlib import Path
@@ -32,7 +32,7 @@ def get_files_state(paths):
 
     for file in music_files:
         with file.open("rb") as f:
-            file_hash = hashlib.sha256(f.read()).hexdigest()
+            file_hash = xxhash.xxh3_64_hexdigest(f.read())
         files_state[file_hash].append(file)
 
     return files_state
