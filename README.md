@@ -8,6 +8,12 @@ The script works by traversing the directories you specify, identifying all musi
 
 ## Usage
 
+First you must install requirements:
+
+```bash
+python3 -m pip install -r requirements.txt
+```
+
 To use this script, simply run it from the command line with the directories you want to check as arguments. For example:
 
 ```bash
